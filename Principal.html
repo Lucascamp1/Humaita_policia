@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humaitá</title>
+    <script src="baixarimagem.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #canvas-container {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        #canvas {
+            border: 1px solid black;
+            width: 160%;
+        }
+
+        .text-input {
+            margin-bottom: 10px;
+            border: none;
+            background-color: rgb(0, 0, 0);
+            width: 74%;
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            padding: 5px;
+        }
+
+        #download-btn {
+            display: block;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            width: 200px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #download-btn:hover {
+            background-color: orange;
+        }
+
+        .boletim {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .meio {
+            /* display: flex; */
+            /* justify-content: center; */
+            margin-left: 260px;
+        }
+
+        .campos {
+            margin-left: 257px;
+        }
+
+        .botaomeio{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <title>Humaitá</title>
+
+    <h1 class="boletim">Boletim Interno Humaitá</h1>
+
+    <div class="meio">
+        <div id="canvas-container">
+            <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+    </div>
+
+    <div class="campos">
+        <input type="text" class="text-input" id="texto1" placeholder="">
+        <input type="text" class="text-input" id="texto2" placeholder="">
+    </div>
+
+    <div class="botaomeio">
+        <div>
+            <button id="download-btn">Download</button>
+        </div>
+    </div>
+</body>
+
+</html>
