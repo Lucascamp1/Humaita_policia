@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://cdn.discordapp.com/attachments/1045506981823270933/1126255625387647107/adesivo-parede-camulfado-cinza-0-58x3m-tunning.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+        }
+    </style>
+</body>
+
+</html>
