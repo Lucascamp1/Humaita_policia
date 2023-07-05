@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const imagem = new Image();
   imagem.crossOrigin = "anonymous";
-  imagem.src = "https://cdn.discordapp.com/attachments/1114641391272853640/1126170099599020132/download.png";
+  imagem.src = "https://cdn.discordapp.com/attachments/1045506981823270933/1126266522722127922/Sem_Titulo-2.png";
   imagem.addEventListener("load", () => {
     context.drawImage(imagem, 0, 0);
   });
