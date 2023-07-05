@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Humaitá</title>
+    <style>
+        /* Estilos CSS para posicionar os elementos */
+        #canvas-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        #canvas {
+            border: 1px solid black;
+            width: 120%;
+        }
+
+        .text-input {
+            margin-bottom: 10px;
+        }
+
+        #download-btn {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div>
+            <input type="text" class="text-input" id="texto1" placeholder="Texto 1">
+            <input type="text" class="text-input" id="texto2" placeholder="Texto 2">
+        </div>
+    </div>
+    <button id="download-btn">Baixar Imagem</button>
+</body>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const downloadBtn = document.getElementById('download-btn');
+
+        const imagem = new Image();
+        imagem.crossOrigin = 'anonymous';
+        imagem.src = 'https://cdn.discordapp.com/attachments/1045506981823270933/1125968901419827210/teste.jpg';
+        imagem.addEventListener('load', () => {
+            context.drawImage(imagem, 0, 0);
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            const texto1 = document.getElementById('texto1').value;
+            const texto2 = document.getElementById('texto2').value;
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.drawImage(imagem, 0, 0);
+
+            context.font = '30px Arial';
+            context.fillText(texto1, 50, 50); // Coordenadas do texto 1
+            context.fillText(texto2, 100, 100); // Coordenadas do texto 2
+
+            const downloadLink = document.createElement('a');
+            downloadLink.href = canvas.toDataURL();
+            downloadLink.download = 'imagem_modificada.png';
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+    });
+</script>
+
+</html>
