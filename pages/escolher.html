@@ -16,11 +16,11 @@
 <body>
     <style>
         ::-webkit-scrollbar {
-            width: 10px
+            width: 1px
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: tomato
+            background-color: rgb(0, 0, 0)
         }
 
         @import url('https://fonts.cdnfonts.com/css/revamped');
@@ -81,6 +81,12 @@
             display: flex;
             justify-content: center;
             margin-top: 5%;
+            cursor: pointer;
+        }
+
+        .imagem:hover{
+            transform: translate(10px)scale(1.5);
+            transform: translateY(10px)scale(1.5);
         }
 
         .geral{
